@@ -5,9 +5,9 @@ HOST: http://www.google.com
 Internal API is a document retrieval service
 
 # Group CaseFile
-CaseFile related resources of the **ServiceDocs API**
+CaseFile related resources of the **InternalApi API**
 
-## ItnernalApi [/casefile/mismo/{loanNumber}{?ausNumber,useInstitutionId}]
+## ItnernalApi [/casefile/mismo/{?loanNumber,ausNumber,useInstitutionId}]
 A single Document object with all its details
 - Unique Identifier (id)
 - Content (content)
@@ -16,9 +16,9 @@ A single Document object with all its details
 
 ### Retrieve a Note [GET]
 + Parameters
-    + loanNumber (required, string, `000012345`) ... String `loanNumber` of the Document to retrieve. Has example value.
-    + ausNumber (required, string, `54321`) ... String `ausNumber` of Document to retrieve. Has example value.
-    + useInstitutionId (optional, string, `True`) ... Bool `useInstitutionId` indicating whether institution id is required in request. Default is `true`.  Has example value.
+    + loanNumber (optional, string, `000012345`) ... String `loanNumber` of the Document to retrieve. Has example value.
+    + ausNumber (optional, string, `54321`) ... String `ausNumber` of Document to retrieve. Has example value.
+    + useInstitutionId (optional, string, `True`) ... Bool `useInstitutionId` indicating whether institution id should be used in request. Default is `true`.  Has example value.
 
 
 + Response 200 (application/json)
