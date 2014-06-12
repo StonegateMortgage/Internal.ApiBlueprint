@@ -1,0 +1,41 @@
+FORMAT: 1A
+HOST: http://www.google.com
+
+# ServiceDocs API
+ServiceDocs API is a document retrieval service
+
+# Group CaseFile
+CaseFile related resources of the **ServiceDocs API**
+
+## ServiceDocs [/casefile/mismo/{loanNumber}{?ausNumber,useInstitutionId}]
+A single Document object with all its details
+- Unique Identifier (id)
+- Content (content)
+- Date Created (createdDateTime)
+- Attachment Description (AttachmentDesc)
+
+### Retrieve a Note [GET]
++ Parameters
+    + loanNumber (required, string, `000012345`) ... String `loanNumber` of the Document to retrieve. Has example value.
+    + ausNumber (required, string, `54321`) ... String `ausNumber` of Document to retrieve. Has example value.
+    + useInstitutionId (optional, string, `True`) ... Bool `useInstitutionId` indicating whether institution id is required in request. Default is `true`.  Has example value.
+
+
++ Response 200 (application/json)
+
+            {
+                ID: 10
+                Content: "<mismo />"
+                CreatedDateTime: "2014-05-28T15:18:37.5247571-05:00"
+                AttachmentDesc: "Dummy attachment until real one is available"
+            }
+
+            
++ Response 200 (application/xml)
+
+            <AttachmentResponse>
+                <ID>10</ID>
+                <Content><mismo /></Content>
+                <CreatedDateTime />
+                <AttachmentDesc>Dummy attachment until real one is available</AttachmentDesc>
+            </AttachmentResponse>
