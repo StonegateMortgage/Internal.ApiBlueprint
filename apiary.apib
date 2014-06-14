@@ -30,12 +30,26 @@ A single Document object with all its details
                 AttachmentDesc: "Dummy attachment until real one is available"
             }
 
-            
-+ Response 200 (application/xml)
++ Response 403 (application/json)
 
-            <AttachmentResponse>
-                <ID>10</ID>
-                <Content><mismo /></Content>
-                <CreatedDateTime />
-                <AttachmentDesc>Dummy attachment until real one is available</AttachmentDesc>
-            </AttachmentResponse>
+            {
+                Message: --Fannie Mae Error Code--
+            }
+            
++ Response 404 (application/json)
+
+            {
+                Message: --Fannie Mae Error Code--
+            }
+            
++ Response 500 (application/json)
+
+            {
+                Message: --Fannie Mae Error Code--
+            }
+            
++ Response 503 (application/json)
+
+            {
+                Message: --Fannie Mae Error Code--
+            }
